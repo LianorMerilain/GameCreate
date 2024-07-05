@@ -1,14 +1,14 @@
-using System.Collections;                 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 public class PlControl : MonoBehaviour
 {
-    public UI _uiComponent;
+    private UI _uiComponent;
     public Queue<Vector3> ChestPositionPoint = new();
     private LineRenderer _lineRenderer;
-    private float _speed=9;
+    private float _speed = 9;
     private bool _isMoving = false;
     private void Start()
     {

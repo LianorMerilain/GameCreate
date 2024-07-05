@@ -8,7 +8,6 @@ public class UI : MonoBehaviour
     public float Speed;
     public Text ScoreText;
     public Scrollbar SpeedScrollbar;
-
     private void Start()
     {
         PlControl cop = GetComponent<PlControl>();
@@ -16,15 +15,12 @@ public class UI : MonoBehaviour
         SpeedScrollbar.onValueChanged.AddListener(delegate { UpdateSpeed(); });
         UpdateSpeed();
     }
-
     private void Update()
     {
         ScoreText.text = "active click: " + Cp.Count;
     }
-
     public void UpdateSpeed()
     {
         Speed = SpeedScrollbar.value * 10;
-        Debug.Log("Текущая скорость: " + Speed);
     }
 }
