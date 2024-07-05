@@ -12,8 +12,6 @@ public class UI : MonoBehaviour
     {
         PlControl cop = GetComponent<PlControl>();
         Cp = cop.ChestPositionPoint;
-        SpeedScrollbar.onValueChanged.AddListener(delegate { UpdateSpeed(); });
-        UpdateSpeed();
     }
     private void Update()
     {
